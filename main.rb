@@ -3,7 +3,6 @@ require './students'
 require './comments'
 
 require 'sinatra'
-require 'sinatra/reloader'
 require 'data_mapper'
 require 'slim'
 require 'erb'
