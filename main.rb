@@ -16,6 +16,17 @@ $loginFlag = 0;
 
 set :environment, :production
 
+
+configure :development do
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
+
+configure :development, :text do
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
+
+
+
 configure do
   enable :session
   set :username, "yuan"
