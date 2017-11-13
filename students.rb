@@ -1,3 +1,4 @@
+require 'dm-sqlite-adapter'
 require 'data_mapper'
 
 DataMapper::Logger.new($stdout, :debug)
