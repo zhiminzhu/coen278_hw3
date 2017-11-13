@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require './students.rb'
 require './students'
 require './comments'
 
