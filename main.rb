@@ -14,7 +14,7 @@ $names_list = Array.new
 
 $loginFlag = 0;
 
-set :environment, :production
+set :environment, :development
 
 
 configure :development do
@@ -25,10 +25,6 @@ configure :development, :text do
   DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
 end
 
-configure :production do
-  DataMapper.setup(:default, 
-    "sqlite3:///#{Dir.pwd}students.db")
-end
 
 configure do
   enable :session
