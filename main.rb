@@ -18,17 +18,21 @@ set :environment, :development
 
 
 configure :development do
-  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
-  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}comments.db")
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:students.db")
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:comments.db")
 end
 
 
 
 configure :development, :text do
-  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
-  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}comments.db")
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:students.db")
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:comments.db")
 end
 
+
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'])
+end
 
 configure do
   enable :session

@@ -1,9 +1,7 @@
-require 'dm-sqlite-adapter'
 require 'data_mapper'
 
 DataMapper::Logger.new($stdout, :debug)
-DataMapper::setup(:default,"sqlite3:///#{Dir.pwd}students.db")
-
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:students.db")
 class Students 
 	include DataMapper::Resource
 	property :firstname, String
