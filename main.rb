@@ -31,7 +31,8 @@ end
 
 
 configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'])
+  DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:students.db")
+DataMapper.setup(:default, ENV["DATABASE_URL"] || "sqlite:comments.db")
 end
 
 configure do
