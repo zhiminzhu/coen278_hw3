@@ -19,10 +19,14 @@ set :environment, :development
 
 configure :development do
   DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
+  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}comments.db")
 end
+
+
 
 configure :development, :text do
   DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
+  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}comments.db")
 end
 
 
