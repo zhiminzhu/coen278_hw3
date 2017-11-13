@@ -8,4 +8,5 @@ gem "thin"
 gem "pg", :group => :production
 gem "dm-postgres-adapter", :group => :production
 gem "dm-sqlite-adapter", :group => :development
-ruby '2.3.4'
+gem 'data_mapper'
+ruby '2.4.2'
