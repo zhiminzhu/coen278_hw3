@@ -18,11 +18,11 @@ set :environment, :production
 
 
 configure :development do
-  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
 end
 
 configure :development, :text do
-  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+  DataMapper.setup(:default, "sqlite3:///#{Dir.pwd}students.db")
 end
 
 configure :production do
