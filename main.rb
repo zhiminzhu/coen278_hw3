@@ -206,7 +206,7 @@ __END__
 <html>
 <head> </head>
 <body>
-    <h1> Songs for Sinatra</h1>
+    <h1> Students </h1>
     <img src="https://cdn.off---white.com/custom_page_images/1032/slider_1.jpg?1488806441" alt="Slider 1" width = 500>
     <div class="topnav" id="myTopnav">
       <a href="/">Home</a>
