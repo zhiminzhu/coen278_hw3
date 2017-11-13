@@ -1,0 +1,23 @@
+<p> "Comments" </p>
+<img src="https://hypb.imgix.net/image/2017/08/mayweather-mcgregor-fight-2-2.jpg?w=1755&amp;q=90&amp;fit=max&amp;auto=compress%2Cformat" alt="mini" width = 100>
+<table>
+  <tr>
+    <th>Comments</th>
+
+  </tr>
+  <% if Comments.count != 0 %>
+  <% for i in 0..Comments.count - 1 %>
+  <tr>
+    <td>
+    	<form method = "POST" action = '/comments_info' >   	
+        <input type="submit" value=<%= Comments.at(i).student_id %> name = "comments_trans_id" style="height:100px; width:100px">	
+        </form>
+    </td>
+    <td><%= Comments.at(i).created_at %></td>
+    
+  <% end %>
+  <% end %>
+</table>
+<ul>
+<a href="/comments_add">Add</a>
+</ul>

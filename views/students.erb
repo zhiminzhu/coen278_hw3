@@ -1,0 +1,22 @@
+<p> "Students" </p>
+<img src="/images/mini.jpg" alt="mini" width = 100>
+<table>
+  <tr>
+    <th>Student ID</th>
+
+  </tr>
+  <% if Students.last != nil %>
+  <% for i in 0..Students.count - 1 %>
+  <tr>
+    <td>
+    	<form method = "POST" action = '/info' >   	
+        <input type="submit" value=<%= Students.at(i).student_id %> name = "trans_id" style="height:100px; width:100px">	
+        </form>
+    </td>
+    
+  <% end %>
+  <% end %>
+</table>
+<ul>
+<a href="/add">Add</a>
+</ul>

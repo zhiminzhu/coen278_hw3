@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Time</th>
+    <th>Content</th>
+
+  </tr>
+  <% if Comments.last != nil %>
+  <tr>
+    
+    <td><%= Comments.get(params[:comments_trans_id]).name %></td>
+    <td><%= Comments.get(params[:comments_trans_id]).created_at %></td>
+    <td><%= Comments.get(params[:comments_trans_id]).content %></td>
+
+ 
+    <%= $comments_global_id = params[:comments_trans_id]%>
+
+     <form method = "POST" action = '/comments_delete'>
+    <td><input type="submit" value = "Delete" name = "delete"></td>  
+    </form>
+    
+  </tr>
+  </tr>
+  </form>
+  <% end %>
+</table>

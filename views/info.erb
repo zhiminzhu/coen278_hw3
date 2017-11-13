@@ -1,0 +1,30 @@
+<table>
+  <tr>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Birthday</th>
+    <th>Address</th>
+    <th>Id</th>
+  </tr>
+  <% if Students.last != nil %>
+  <tr>
+    
+    <td><%= Students.get(params[:trans_id]).firstname %></td>
+    <td><%= Students.get(params[:trans_id]).lastname %></td>
+    <td><%= Students.get(params[:trans_id]).birthday %></td>
+    <td><%= Students.get(params[:trans_id]).address %></td>
+    <td><%= Students.get(params[:trans_id]).student_id %></td>
+ 
+    <%= $global_id = params[:trans_id]%>
+    <form method = "GET" action = '/edit'>
+    <td><input type="submit" value = "Edit" name = "id_info" style="height:100px; width:100px"></td>
+    </form>
+
+    <form method = "POST" action = '/delete'>
+    <td><input type="submit" value = "Delete" name = "delete"></td>  
+    </form>
+  </tr>
+  </tr>
+  </form>
+  <% end %>
+</table>
